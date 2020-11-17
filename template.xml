@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xmeml>
+<xmeml version="4">
+	<sequence id="sequence-1" TL.SQAudioVisibleBase="0" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="0" TL.SQAVDividerPosition="0.5" TL.SQHideShyTracks="0" TL.SQHeaderWidth="236" Monitor.ProgramZoomOut="133070077002324" Monitor.ProgramZoomIn="0" TL.SQTimePerPixel="0.84594973274537721" MZ.EditLine="27938955561094" MZ.Sequence.PreviewFrameSizeHeight="1080" MZ.Sequence.PreviewFrameSizeWidth="1920" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.PreviewRenderingClassID="1297106761" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets/SequencePreview/795454d9-d3c2-429d-9474-923ab13b7018/I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.EditingModeGUID="795454d9-d3c2-429d-9474-923ab13b7018" MZ.Sequence.VideoTimeDisplayFormat="102" MZ.WorkOutPoint="255627037440000" MZ.WorkInPoint="0" explodedTracks="true">
+		<uuid>e3f24982-3358-43f1-9441-84f30c8e3bf1</uuid>
+		<duration>0</duration>
+		<rate>
+			<timebase>29</timebase>
+			<ntsc>FALSE</ntsc>
+		</rate>
+		<name></name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>29</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>1920</width>
+						<height>1080</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="0">
+					<clipitem id="clipitem-1">
+						<masterclipid>masterclip-1</masterclipid>
+						<name>グラフィック</name>
+						<enabled>TRUE</enabled>
+						<duration>1295344</duration>
+						<rate>
+							<timebase>29</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>277</start>
+						<end>372</end>
+						<in>277</in>
+						<out>372</out>
+						<alphatype>straight</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<file id="file-1">
+							<name>グラフィック</name>
+							<mediaSource>GraphicAndType</mediaSource>
+							<rate>
+								<timebase>30</timebase>
+								<ntsc>TRUE</ntsc>
+							</rate>
+							<timecode>
+								<rate>
+									<timebase>30</timebase>
+									<ntsc>TRUE</ntsc>
+								</rate>
+								<string>00;00;00;00</string>
+								<frame>0</frame>
+								<displayformat>DF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>30</timebase>
+											<ntsc>TRUE</ntsc>
+										</rate>
+										<width>1920</width>
+										<height>1080</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+							</media>
+						</file>
+						<filter>
+							<effect>
+								<name></name>
+								<effectid>GraphicAndType</effectid>
+								<effectcategory>graphic</effectcategory>
+								<effecttype>filter</effecttype>
+								<mediatype>video</mediatype>
+								<pproBypass>false</pproBypass>
+								<parameter authoringApp="PremierePro">
+									<parameterid>1</parameterid>
+									<name>ソーステキスト</name>
+									<hash>f4269260-0c9a-5da6-c8d1-3d1100000f7a</hash>
+									<value>Zg8AAAAAAAB7ACIAbQBTAGgAYQBkAG8AdwBGAG8AbgB0AE0AYQBwAEgAYQBzAGgAIgA6ACIAZgBhADcANQAwADIAOQA5AC0AZAA2ADgAYQAtADIAZQBkADAALQBlADAAYgA2AC0AZgA3ADIAMwAwADAAMAAwADAAMABjADUAIgAsACIAbQBUAGUAeAB0AFAAYQByAGEAbQAiADoAewAiAG0AQQBsAGkAZwBuAG0AZQBuAHQAIgA6ADIALAAiAG0AQgBhAGMAawBGAGkAbABsAEMAbwBsAG8AcgAiADoANgA3ADEAMAA2ADIAOQAsACIAbQBCAGEAYwBrAEYAaQBsAGwATwBwAGEAYwBpAHQAeQAiADoAMgA3AC4AMwAxADkANQA4ADUAOAAwADAAMQA3ADAAOAA5ADgALAAiAG0AQgBhAGMAawBGAGkAbABsAFMAaQB6AGUAIgA6ADUAMAAsACIAbQBCAGEAYwBrAEYAaQBsAGwAVgBpAHMAaQBiAGwAZQAiADoAZgBhAGwAcwBlACwAIgBtAEQAZQBmAGEAdQBsAHQAUgB1AG4AIgA6AFsAXQAsACIAbQBIAGUAaQBnAGgAdAAiADoAMAAsACIAbQBIAGkAbgBkAGkARABpAGcAaQB0AHMAIgA6AGYAYQBsAHMAZQAsACIAbQBJAG4AZABpAGMAIgA6AGYAYQBsAHMAZQAsACIAbQBJAHMATQBhAHMAawAiADoAZgBhAGwAcwBlACwAIgBtAEkAcwBNAGEAcwBrAEkAbgB2AGUAcgB0AGUAZAAiADoAZgBhAGwAcwBlACwAIgBtAEkAcwBWAGUAcgB0AGkAYwBhAGwAVABlAHgAdAAiADoAZgBhAGwAcwBlACwAIgBtAEwAZQBhAGQAaQBuAGcAIgA6ADQALAAiAG0ATABpAGcAYQB0AHUAcgBlAHMAIgA6AGYAYQBsAHMAZQAsACIAbQBMAGkAbgBlAEMAYQBwAFQAeQBwAGUAIgA6ADAALAAiAG0ATABpAG4AZQBKAG8AaQBuAFQAeQBwAGUAIgA6ADAALAAiAG0ATQBpAHQAZQByAEwAaQBtAGkAdAAiADoAMgAuADUALAAiAG0ATgB1AG0AUwB0AHIAbwBrAGUAcwAiADoAMQAsACIAbQBSAFQATAAiADoAZgBhAGwAcwBlACwAIgBtAFMAaABhAGQAbwB3AEEAbgBnAGwAZQAiADoAMQAzADUALAAiAG0AUwBoAGEAZABvAHcAQgBsAHUAcgAiADoAMgA1ADAALAAiAG0AUwBoAGEAZABvAHcAQwBvAGwAbwByACIAOgAwACwAIgBtAFMAaABhAGQAbwB3AE8AZgBmAHMAZQB0ACIAOgAxADAALAAiAG0AUwBoAGEAZABvAHcATwBwAGEAYwBpAHQAeQAiADoAMQAwADAALAAiAG0AUwBoAGEAZABvAHcAUwBpAHoAZQAiADoAMAAsACIAbQBTAGgAYQBkAG8AdwBWAGkAcwBpAGIAbABlACIAOgB0AHIAdQBlACwAIgBtAFMAdAB5AGwAZQBTAGgAZQBlAHQAIgA6AHsAIgBtAEEAZABkAGkAdABpAG8AbgBhAGwAUwB0AHIAbwBrAGUAQwBvAGwAbwByACIAOgBbAF0ALAAiAG0AQQBkAGQAaQB0AGkAbwBuAGEAbABTAHQAcgBvAGsAZQBWAGkAcwBpAGIAbABlACIAOgBbAF0ALAAiAG0AQQBkAGQAaQB0AGkAbwBuAGEAbABTAHQAcgBvAGsAZQBXAGkAZAB0AGgAIgA6AFsAXQAsACIAbQBCAGEAcwBlAGwAaQBuAGUATwBwAHQAaQBvAG4AIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAEIAYQBzAGUAbABpAG4AZQBTAGgAaQBmAHQAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAEMAYQBwAHMATwBwAHQAaQBvAG4AIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAEYAYQB1AHgAQgBvAGwAZAAiADoAewAiAG0AUABhAHIAYQBtAFYAYQBsAHUAZQBzACIAOgBbAFsAMAAsAGYAYQBsAHMAZQBdAF0AfQAsACIAbQBGAGEAdQB4AEkAdABhAGwAaQBjACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAZgBhAGwAcwBlAF0AXQB9ACwAIgBtAEYAaQBsAGwAQwBvAGwAbwByACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAMwAzADYAOQA3ADIANwBdACwAWwAxACwAMwAzADYAOQA3ADIANwBdACwAWwAyACwAMwAzADYAOQA3ADIANwBdACwAWwAzACwAMwAzADYAOQA3ADIANwBdACwAWwA0ACwAMwAzADYAOQA3ADIANwBdACwAWwA1ACwAMwAzADYAOQA3ADIANwBdACwAWwA2ACwAMwAzADYAOQA3ADIANwBdACwAWwA3ACwAMwAzADYAOQA3ADIANwBdACwAWwA4ACwAMwAzADYAOQA3ADIANwBdACwAWwA5ACwAMQA2ADcANwA3ADIAMQA1AF0AXQB9ACwAIgBtAEYAaQBsAGwATwB2AGUAcgBTAHQAcgBvAGsAZQAiADoAewAiAG0AUABhAHIAYQBtAFYAYQBsAHUAZQBzACIAOgBbAFsAMAAsAHQAcgB1AGUAXQBdAH0ALAAiAG0ARgBpAGwAbABWAGkAcwBpAGIAbABlACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAdAByAHUAZQBdAF0AfQAsACIAbQBGAG8AbgB0AE4AYQBtAGUAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsAMQAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwAyACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADMALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsANAAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwA1ACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADYALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsANwAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwA4ACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADkALAAiADUAOAA3ADIANAAyADAAMgAtAEQARAA1ADgALQA0ADIAMABCAC0AQQA2AEYAMAAtADIARgBCAEIAQwA4ADEAMgBGADcAQgA1ACIAXQBdAH0ALAAiAG0ARgBvAG4AdABTAGkAegBlACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAOAA1AF0ALABbADEALAA4ADUAXQAsAFsAMgAsADgANQBdACwAWwAzACwAOAA1AF0ALABbADQALAA4ADUAXQAsAFsANQAsADgANQBdACwAWwA2ACwAOAA1AF0ALABbADcALAA4ADUAXQAsAFsAOAAsADgANQBdACwAWwA5ACwAMQAwADAAXQBdAH0ALAAiAG0ASwBlAHIAbgBpAG4AZwAiADoAewAiAG0AUABhAHIAYQBtAFYAYQBsAHUAZQBzACIAOgBbAFsAMAAsADAAXQBdAH0ALAAiAG0AUwB0AHIAbwBrAGUAQwBvAGwAbwByACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAMQA2ADcANwA3ADIAMQA1AF0AXQB9ACwAIgBtAFMAdAByAG8AawBlAFYAaQBzAGkAYgBsAGUAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAB0AHIAdQBlAF0ALABbADEALAB0AHIAdQBlAF0ALABbADIALAB0AHIAdQBlAF0ALABbADMALAB0AHIAdQBlAF0ALABbADQALAB0AHIAdQBlAF0ALABbADUALAB0AHIAdQBlAF0ALABbADYALAB0AHIAdQBlAF0ALABbADcALAB0AHIAdQBlAF0ALABbADgALAB0AHIAdQBlAF0ALABbADkALABmAGEAbABzAGUAXQBdAH0ALAAiAG0AUwB0AHIAbwBrAGUAVwBpAGQAdABoACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAOABdACwAWwAxACwAOABdACwAWwAyACwAOABdACwAWwAzACwAOABdACwAWwA0ACwAOABdACwAWwA1ACwAOABdACwAWwA2ACwAOABdACwAWwA3ACwAOABdACwAWwA4ACwAOABdACwAWwA5ACwAMQBdAF0AfQAsACIAbQBUAGUAeAB0ACIAOgAiAIZ2VTCTMAEwUzCTMGswYTBvMCIALAAiAG0AVAByAGEAYwBrAGkAbgBnACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAMABdAF0AfQAsACIAbQBUAHMAdQBtAGkAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAFUAbgBkAGUAcgBsAGkAbgBlACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAZgBhAGwAcwBlAF0AXQB9AH0ALAAiAG0AVABhAGIAVwBpAGQAdABoACIAOgA0ADAAMAAsACIAbQBWAGUAcgB0AGkAYwBhAGwAQQBsAGkAZwBuAG0AZQBuAHQAIgA6ADIALAAiAG0AVwBpAGQAdABoACIAOgAwAH0ALAAiAG0AVQBzAGUATABlAGcAYQBjAHkAVABlAHgAdABCAG8AeAAiADoAZgBhAGwAcwBlACwAIgBtAFYAZQByAHMAaQBvAG4AIgA6ADEAfQA=</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>2</parameterid>
+									<name>トランスフォーム</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>11</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>false</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>3</parameterid>
+									<name>位置</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<value>-91445760000000000,0.49801737070083618:0.9246673583984375,0,0,0,0,0,0,5,4,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>4</parameterid>
+									<name>スケール</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>4000</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>5</parameterid>
+									<name>水平比率</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>4000</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>6</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,true,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>7</parameterid>
+									<name>回転</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>3</ParameterControlType>
+									<LowerBound>-32768</LowerBound>
+									<UpperBound>32767</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>8</parameterid>
+									<name>不透明度</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>100</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>9</parameterid>
+									<name>アンカーポイント</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<value>-91445760000000000,0:0,0,0,0,0,0,0,5,4,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>10</parameterid>
+									<name></name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>12</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>false</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>11</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>32768</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>12</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>32768</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>13</parameterid>
+									<name>start</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>-100</LowerBound>
+									<UpperBound>1000000000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>14</parameterid>
+									<name>end</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>-100</LowerBound>
+									<UpperBound>1000000000</UpperBound>
+									<value>-91445760000000000,9.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>15</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>16</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>17</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>18</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>19</parameterid>
+									<name>親の幅</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>20000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>20</parameterid>
+									<name>親の高さ</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>20000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>21</parameterid>
+									<name>親の回転</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>3</ParameterControlType>
+									<LowerBound>-32768</LowerBound>
+									<UpperBound>32767</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+							</effect>
+						</filter>
+						<logginginfo>
+							<description></description>
+							<scene></scene>
+							<shottake></shottake>
+							<lognote></lognote>
+							<good></good>
+							<originalvideofilename></originalvideofilename>
+							<originalaudiofilename></originalaudiofilename>
+						</logginginfo>
+						<colorinfo>
+							<lut></lut>
+							<lut1></lut1>
+							<asc_sop></asc_sop>
+							<asc_sat></asc_sat>
+							<lut2></lut2>
+						</colorinfo>
+						<labels>
+						</labels>
+					</clipitem>
+					<clipitem id="clipitem-2">
+						<masterclipid>masterclip-1</masterclipid>
+						<name>グラフィック</name>
+						<enabled>TRUE</enabled>
+						<duration>1295344</duration>
+						<rate>
+							<timebase>29</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>372</start>
+						<end>474</end>
+						<in>107945</in>
+						<out>108047</out>
+						<alphatype>straight</alphatype>
+						<file id="file-1"/>
+						<filter>
+							<effect>
+								<name></name>
+								<effectid>GraphicAndType</effectid>
+								<effectcategory>graphic</effectcategory>
+								<effecttype>filter</effecttype>
+								<mediatype>video</mediatype>
+								<pproBypass>false</pproBypass>
+								<parameter authoringApp="PremierePro">
+									<parameterid>1</parameterid>
+									<name>ソーステキスト</name>
+									<hash>69f7f2e9-e35c-18b5-75bd-09de0000121a</hash>
+									<value>BhIAAAAAAAB7ACIAbQBTAGgAYQBkAG8AdwBGAG8AbgB0AE0AYQBwAEgAYQBzAGgAIgA6ACIANABhADkAMgAwADcAZQBkAC0AZgBmAGEAZgAtADMAZABmAGUALQBmAGIANgAyAC0ANgA0AGQAMgAwADAAMAAwADAAMQAzAGQAIgAsACIAbQBUAGUAeAB0AFAAYQByAGEAbQAiADoAewAiAG0AQQBsAGkAZwBuAG0AZQBuAHQAIgA6ADIALAAiAG0AQgBhAGMAawBGAGkAbABsAEMAbwBsAG8AcgAiADoANgA3ADEAMAA2ADIAOQAsACIAbQBCAGEAYwBrAEYAaQBsAGwATwBwAGEAYwBpAHQAeQAiADoAMgA3AC4AMwAxADkANQA4ADUAOAAwADAAMQA3ADAAOAA5ADgALAAiAG0AQgBhAGMAawBGAGkAbABsAFMAaQB6AGUAIgA6ADUAMAAsACIAbQBCAGEAYwBrAEYAaQBsAGwAVgBpAHMAaQBiAGwAZQAiADoAZgBhAGwAcwBlACwAIgBtAEQAZQBmAGEAdQBsAHQAUgB1AG4AIgA6AFsAXQAsACIAbQBIAGUAaQBnAGgAdAAiADoAMAAsACIAbQBIAGkAbgBkAGkARABpAGcAaQB0AHMAIgA6AGYAYQBsAHMAZQAsACIAbQBJAG4AZABpAGMAIgA6AGYAYQBsAHMAZQAsACIAbQBJAHMATQBhAHMAawAiADoAZgBhAGwAcwBlACwAIgBtAEkAcwBNAGEAcwBrAEkAbgB2AGUAcgB0AGUAZAAiADoAZgBhAGwAcwBlACwAIgBtAEkAcwBWAGUAcgB0AGkAYwBhAGwAVABlAHgAdAAiADoAZgBhAGwAcwBlACwAIgBtAEwAZQBhAGQAaQBuAGcAIgA6ADQALAAiAG0ATABpAGcAYQB0AHUAcgBlAHMAIgA6AGYAYQBsAHMAZQAsACIAbQBMAGkAbgBlAEMAYQBwAFQAeQBwAGUAIgA6ADAALAAiAG0ATABpAG4AZQBKAG8AaQBuAFQAeQBwAGUAIgA6ADAALAAiAG0ATQBpAHQAZQByAEwAaQBtAGkAdAAiADoAMgAuADUALAAiAG0ATgB1AG0AUwB0AHIAbwBrAGUAcwAiADoAMQAsACIAbQBSAFQATAAiADoAZgBhAGwAcwBlACwAIgBtAFMAaABhAGQAbwB3AEEAbgBnAGwAZQAiADoAMQAzADUALAAiAG0AUwBoAGEAZABvAHcAQgBsAHUAcgAiADoAMgA1ADAALAAiAG0AUwBoAGEAZABvAHcAQwBvAGwAbwByACIAOgAwACwAIgBtAFMAaABhAGQAbwB3AE8AZgBmAHMAZQB0ACIAOgAxADAALAAiAG0AUwBoAGEAZABvAHcATwBwAGEAYwBpAHQAeQAiADoAMQAwADAALAAiAG0AUwBoAGEAZABvAHcAUwBpAHoAZQAiADoAMAAsACIAbQBTAGgAYQBkAG8AdwBWAGkAcwBpAGIAbABlACIAOgB0AHIAdQBlACwAIgBtAFMAdAB5AGwAZQBTAGgAZQBlAHQAIgA6AHsAIgBtAEEAZABkAGkAdABpAG8AbgBhAGwAUwB0AHIAbwBrAGUAQwBvAGwAbwByACIAOgBbAF0ALAAiAG0AQQBkAGQAaQB0AGkAbwBuAGEAbABTAHQAcgBvAGsAZQBWAGkAcwBpAGIAbABlACIAOgBbAF0ALAAiAG0AQQBkAGQAaQB0AGkAbwBuAGEAbABTAHQAcgBvAGsAZQBXAGkAZAB0AGgAIgA6AFsAXQAsACIAbQBCAGEAcwBlAGwAaQBuAGUATwBwAHQAaQBvAG4AIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAEIAYQBzAGUAbABpAG4AZQBTAGgAaQBmAHQAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAEMAYQBwAHMATwBwAHQAaQBvAG4AIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAEYAYQB1AHgAQgBvAGwAZAAiADoAewAiAG0AUABhAHIAYQBtAFYAYQBsAHUAZQBzACIAOgBbAFsAMAAsAGYAYQBsAHMAZQBdAF0AfQAsACIAbQBGAGEAdQB4AEkAdABhAGwAaQBjACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAZgBhAGwAcwBlAF0AXQB9ACwAIgBtAEYAaQBsAGwAQwBvAGwAbwByACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAMwAzADYAOQA3ADIANwBdACwAWwAxACwAMwAzADYAOQA3ADIANwBdACwAWwAyACwAMwAzADYAOQA3ADIANwBdACwAWwAzACwAMwAzADYAOQA3ADIANwBdACwAWwA0ACwAMwAzADYAOQA3ADIANwBdACwAWwA1ACwAMwAzADYAOQA3ADIANwBdACwAWwA2ACwAMwAzADYAOQA3ADIANwBdACwAWwA3ACwAMwAzADYAOQA3ADIANwBdACwAWwA4ACwAMwAzADYAOQA3ADIANwBdACwAWwA5ACwAMwAzADYAOQA3ADIANwBdACwAWwAxADAALAAzADMANgA5ADcAMgA3AF0ALABbADEAMQAsADMAMwA2ADkANwAyADcAXQAsAFsAMQAyACwAMwAzADYAOQA3ADIANwBdACwAWwAxADMALAAzADMANgA5ADcAMgA3AF0ALABbADEANAAsADMAMwA2ADkANwAyADcAXQAsAFsAMQA1ACwAMQA2ADcANwA3ADIAMQA1AF0AXQB9ACwAIgBtAEYAaQBsAGwATwB2AGUAcgBTAHQAcgBvAGsAZQAiADoAewAiAG0AUABhAHIAYQBtAFYAYQBsAHUAZQBzACIAOgBbAFsAMAAsAHQAcgB1AGUAXQBdAH0ALAAiAG0ARgBpAGwAbABWAGkAcwBpAGIAbABlACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAdAByAHUAZQBdAF0AfQAsACIAbQBGAG8AbgB0AE4AYQBtAGUAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsAMQAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwAyACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADMALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsANAAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwA1ACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADYALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsANwAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwA4ACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADkALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsAMQAwACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADEAMQAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwAxADIALAAiAFkAdQBHAG8ALQBCAG8AbABkACIAXQAsAFsAMQAzACwAIgBZAHUARwBvAC0AQgBvAGwAZAAiAF0ALABbADEANAAsACIAWQB1AEcAbwAtAEIAbwBsAGQAIgBdACwAWwAxADUALAAiADUAOAA3ADIANAAyADAAMgAtAEQARAA1ADgALQA0ADIAMABCAC0AQQA2AEYAMAAtADIARgBCAEIAQwA4ADEAMgBGADcAQgA1ACIAXQBdAH0ALAAiAG0ARgBvAG4AdABTAGkAegBlACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAOAA1AF0ALABbADEALAA4ADUAXQAsAFsAMgAsADgANQBdACwAWwAzACwAOAA1AF0ALABbADQALAA4ADUAXQAsAFsANQAsADgANQBdACwAWwA2ACwAOAA1AF0ALABbADcALAA4ADUAXQAsAFsAOAAsADgANQBdACwAWwA5ACwAOAA1AF0ALABbADEAMAAsADgANQBdACwAWwAxADEALAA4ADUAXQAsAFsAMQAyACwAOAA1AF0ALABbADEAMwAsADgANQBdACwAWwAxADQALAA4ADUAXQAsAFsAMQA1ACwAMQAwADAAXQBdAH0ALAAiAG0ASwBlAHIAbgBpAG4AZwAiADoAewAiAG0AUABhAHIAYQBtAFYAYQBsAHUAZQBzACIAOgBbAFsAMAAsADAAXQBdAH0ALAAiAG0AUwB0AHIAbwBrAGUAQwBvAGwAbwByACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAMQA2ADcANwA3ADIAMQA1AF0AXQB9ACwAIgBtAFMAdAByAG8AawBlAFYAaQBzAGkAYgBsAGUAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAB0AHIAdQBlAF0ALABbADEALAB0AHIAdQBlAF0ALABbADIALAB0AHIAdQBlAF0ALABbADMALAB0AHIAdQBlAF0ALABbADQALAB0AHIAdQBlAF0ALABbADUALAB0AHIAdQBlAF0ALABbADYALAB0AHIAdQBlAF0ALABbADcALAB0AHIAdQBlAF0ALABbADgALAB0AHIAdQBlAF0ALABbADkALAB0AHIAdQBlAF0ALABbADEAMAAsAHQAcgB1AGUAXQAsAFsAMQAxACwAdAByAHUAZQBdACwAWwAxADIALAB0AHIAdQBlAF0ALABbADEAMwAsAHQAcgB1AGUAXQAsAFsAMQA0ACwAdAByAHUAZQBdACwAWwAxADUALABmAGEAbABzAGUAXQBdAH0ALAAiAG0AUwB0AHIAbwBrAGUAVwBpAGQAdABoACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAOABdACwAWwAxACwAOABdACwAWwAyACwAOABdACwAWwAzACwAOABdACwAWwA0ACwAOABdACwAWwA1ACwAOABdACwAWwA2ACwAOABdACwAWwA3ACwAOABdACwAWwA4ACwAOABdACwAWwA5ACwAOABdACwAWwAxADAALAA4AF0ALABbADEAMQAsADgAXQAsAFsAMQAyACwAOABdACwAWwAxADMALAA4AF0ALABbADEANAAsADgAXQAsAFsAMQA1ACwAMQBdAF0AfQAsACIAbQBUAGUAeAB0ACIAOgAiAB1SgTB+MFcwZjACMIxURU6FUQ5maDBEMEQwfjBZMCIALAAiAG0AVAByAGEAYwBrAGkAbgBnACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAMABdAF0AfQAsACIAbQBUAHMAdQBtAGkAIgA6AHsAIgBtAFAAYQByAGEAbQBWAGEAbAB1AGUAcwAiADoAWwBbADAALAAwAF0AXQB9ACwAIgBtAFUAbgBkAGUAcgBsAGkAbgBlACIAOgB7ACIAbQBQAGEAcgBhAG0AVgBhAGwAdQBlAHMAIgA6AFsAWwAwACwAZgBhAGwAcwBlAF0AXQB9AH0ALAAiAG0AVABhAGIAVwBpAGQAdABoACIAOgA0ADAAMAAsACIAbQBWAGUAcgB0AGkAYwBhAGwAQQBsAGkAZwBuAG0AZQBuAHQAIgA6ADIALAAiAG0AVwBpAGQAdABoACIAOgAwAH0ALAAiAG0AVQBzAGUATABlAGcAYQBjAHkAVABlAHgAdABCAG8AeAAiADoAZgBhAGwAcwBlACwAIgBtAFYAZQByAHMAaQBvAG4AIgA6ADEAfQA=</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>2</parameterid>
+									<name>トランスフォーム</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>11</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>false</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>3</parameterid>
+									<name>位置</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<value>-91445760000000000,0.49801737070083618:0.9246673583984375,0,0,0,0,0,0,5,4,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>4</parameterid>
+									<name>スケール</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>4000</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>5</parameterid>
+									<name>水平比率</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>4000</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>6</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,true,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>7</parameterid>
+									<name>回転</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>3</ParameterControlType>
+									<LowerBound>-32768</LowerBound>
+									<UpperBound>32767</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>8</parameterid>
+									<name>不透明度</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>100</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>9</parameterid>
+									<name>アンカーポイント</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<value>-91445760000000000,0:0,0,0,0,0,0,0,5,4,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>10</parameterid>
+									<name></name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>12</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>false</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>11</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>32768</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>12</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>32768</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>13</parameterid>
+									<name>start</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>-100</LowerBound>
+									<UpperBound>1000000000</UpperBound>
+									<value>-91445760000000000,15.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>14</parameterid>
+									<name>end</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>8</ParameterControlType>
+									<LowerBound>-100</LowerBound>
+									<UpperBound>1000000000</UpperBound>
+									<value>-91445760000000000,15.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>15</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>16</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>17</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>18</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>19</parameterid>
+									<name>親の幅</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>20000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>20</parameterid>
+									<name>親の高さ</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>20000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>21</parameterid>
+									<name>親の回転</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>3</ParameterControlType>
+									<LowerBound>-32768</LowerBound>
+									<UpperBound>32767</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+							</effect>
+						</filter>
+						<logginginfo>
+							<description></description>
+							<scene></scene>
+							<shottake></shottake>
+							<lognote></lognote>
+							<good></good>
+							<originalvideofilename></originalvideofilename>
+							<originalaudiofilename></originalaudiofilename>
+						</logginginfo>
+						<colorinfo>
+							<lut></lut>
+							<lut1></lut1>
+							<asc_sop></asc_sop>
+							<asc_sat></asc_sat>
+							<lut2></lut2>
+						</colorinfo>
+						<labels>
+						</labels>
+					</clipitem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>44100</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="バランス" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+			</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>29</timebase>
+				<ntsc>FALSE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+		<logginginfo>
+			<description></description>
+			<scene></scene>
+			<shottake></shottake>
+			<lognote></lognote>
+			<good></good>
+			<originalvideofilename></originalvideofilename>
+			<originalaudiofilename></originalaudiofilename>
+		</logginginfo>
+	</sequence>
+</xmeml>
