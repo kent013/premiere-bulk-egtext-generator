@@ -1,5 +1,6 @@
 {
     "require": {
-        "corneltek/getoptionkit": "^2.6"
+        "corneltek/getoptionkit": "^2.6",
+        "youaoi/php-mecab": "^1.0"
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d405bf73f95bc1c4de9edca04886d02c",
+    "content-hash": "a2b7e421c3adc5d7776fcab137c93e05",
     "packages": [
         {
             "name": "corneltek/getoptionkit",
@@ -51,6 +51,55 @@
                 "source": "https://github.com/c9s/GetOptionKit/tree/2.6.0"
             },
             "time": "2017-06-30T14:54:48+00:00"
+        },
+        {
+            "name": "youaoi/php-mecab",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/youaoi/php-mecab.git",
+                "reference": "28fb19866be047732cabf8d6b3e68ec030a20cd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/youaoi/php-mecab/zipball/28fb19866be047732cabf8d6b3e68ec030a20cd4",
+                "reference": "28fb19866be047732cabf8d6b3e68ec030a20cd4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Youaoi\\MeCab\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ateliee",
+                    "email": "info@ateliee.com",
+                    "homepage": "http://ateliee.com"
+                },
+                {
+                    "name": "youaoi",
+                    "email": "ja01youki@gmail.com",
+                    "homepage": "http://aoi.ooo"
+                }
+            ],
+            "description": "mecab reading for php7",
+            "homepage": "https://github.com/youaoi/php-mecab",
+            "keywords": [
+                "mecab"
+            ],
+            "support": {
+                "source": "https://github.com/youaoi/php-mecab/tree/master"
+            },
+            "time": "2019-02-04T04:56:55+00:00"
         }
     ],
     "packages-dev": [],

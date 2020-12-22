@@ -5,16 +5,16 @@
 		<uuid>e3f24982-3358-43f1-9441-84f30c8e3bf1</uuid>
 		<duration>0</duration>
 		<rate>
-			<timebase>29</timebase>
+			<timebase>30</timebase>
 			<ntsc>FALSE</ntsc>
 		</rate>
-		<name></name>
+		<name>captions</name>
 		<media>
 			<video>
 				<format>
 					<samplecharacteristics>
 						<rate>
-							<timebase>29</timebase>
+							<timebase>30</timebase>
 							<ntsc>FALSE</ntsc>
 						</rate>
 						<codec>
@@ -56,7 +56,7 @@
 						<enabled>TRUE</enabled>
 						<duration>1295344</duration>
 						<rate>
-							<timebase>29</timebase>
+							<timebase>30</timebase>
 							<ntsc>FALSE</ntsc>
 						</rate>
 						<start>277</start>
@@ -313,7 +313,7 @@
 						<enabled>TRUE</enabled>
 						<duration>1295344</duration>
 						<rate>
-							<timebase>29</timebase>
+							<timebase>30</timebase>
 							<ntsc>FALSE</ntsc>
 						</rate>
 						<start>372</start>
@@ -609,7 +609,7 @@
 		</media>
 		<timecode>
 			<rate>
-				<timebase>29</timebase>
+				<timebase>30</timebase>
 				<ntsc>FALSE</ntsc>
 			</rate>
 			<string>00:00:00:00</string>
