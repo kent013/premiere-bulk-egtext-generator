@@ -6,6 +6,7 @@ use GetOptionKit\OptionParser;
 use GetOptionKit\OptionPrinter\ConsoleOptionPrinter;
 use Youaoi\MeCab\MeCab;
 
+//var_dump(KatakanaConverter::convert("あいうphilo13sophyバーッ"));exit;
 define("DEBUG", 1);
 
 $specs = new OptionCollection;
@@ -29,7 +30,6 @@ $specs->add('o|output?', 'output file name')
     ->defaultValue('output.xml');
 
 $parser = new OptionParser($specs);
-
 
 try {
     $result = $parser->parse($argv);
@@ -85,14 +85,19 @@ class CaptionTimeArranger{
             $caption->setStartTimeInSecond($srtFile->getIndexOfTimecodedCharacters($cursor)->getTimeInSecond());
             $katakanaCaption = $caption->getKatakanaText();
             $length = mb_strlen($katakanaCaption);
-            $min = (int)($length / 2);
-            $max = (int)($length * 2);
+            $length_min = (int)($length / 2);
+            $length_max = (int)($length * 2);
+            $adjust_min = (int)($length / 2);
+            $adjust_max = (int)($length * 2);
             $matched = "";
             $highestScore = 0;
             $highestAdjust = 0;
 
-            for ($count = $min; $count < $max; $count++) {
-                for ($adjust = -$min; $adjust < $min; $adjust++) {
+            for ($count = $length_min; $count < $length_max; $count++) {
+                for ($adjust = -$adjust_min; $adjust < $adjust_max; $adjust++) {
+                    if($cursor + $adjust < 0){
+                        continue;
+                    }
                     $target = $srtFile->getSubCharactersAsText($cursor + $adjust, $count);
                     $score = 0.0;
 
@@ -111,7 +116,7 @@ class CaptionTimeArranger{
                 $caption->setEndTimeInSecond($srtFile->getIndexOfTimecodedCharacters($cursor + 1)->getTimeInSecond());
             }
             if (DEBUG) {
-                var_dump($matched, $caption);
+                var_dump($katakanaCaption, $matched, $caption);
             }
         }
     }
@@ -163,7 +168,7 @@ class HandCleanedCaptionEntry {
      */
     public function getKatakanaText():string
     {
-        return MeCab::toReading($this->text);
+        return KatakanaConverter::convert($this->text);
     }
 
     /**
@@ -218,20 +223,22 @@ class SRTFile
     {
         $this->filename = $filename;
 
-        if(file_exists($this->filename) === false){
+        if (file_exists($this->filename) === false) {
             throw new Exception('File not found ' . $this->filename);
         }
         $this->content = file_get_contents($this->filename);
 
-        if (preg_match_all('/^([0-9]+)\n([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}) +--> +([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3})\n([^\n]+)\n\n/usm', $this->content, $regs) === false) {
+        if (preg_match_all('/^([0-9]+)\r?\n([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{2,3}) +--> +([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{2,3})\r?\n([^\n]+)\r?\n\r?\n/usm', $this->content, $regs) === false) {
             throw new Exception('Invalid srt file format ' . $this->filename);
         }
 
         for ($index = 0; $index < count($regs[1]); $index++) {
-            $entry = new SRTEntry($regs[1][$index], $regs[2][$index], $regs[3][$index], $regs[4][$index]);
+            if (empty($regs[4][$index])) {
+                continue;
+            }
+            $entry = new SRTEntry($regs[1][$index], $regs[2][$index], $regs[3][$index], trim($regs[4][$index]));
             $this->entries[] = $entry;
         }
-        
         $this->timecodedCharacters = [];
         foreach ($this->getEntries() as $entry) {
             $this->timecodedCharacters = array_merge($this->timecodedCharacters, $entry->getTimecodedCharacters());
@@ -296,7 +303,7 @@ class SRTEntry
         $this->startTimeInSecond = $this->parseTime($this->startTime);
         $this->endTimeInSecond = $this->parseTime($this->endTime);
 
-        $katakanaText = preg_replace('/[ 　、。「」？！]/u', '', $this->getKatakanaText());
+        $katakanaText = $this->getKatakanaText();
         $interval = ($this->getEndTimeInSecond() - $this->getStartTimeInSecond()) / (float)mb_strlen($katakanaText);
         $chars = preg_split('//u', $katakanaText, -1, PREG_SPLIT_NO_EMPTY);
         $this->timecodedCharacters = [];
@@ -307,7 +314,7 @@ class SRTEntry
 
     protected function parseTime(string $timeText): float
     {
-        if (preg_match('/^([0-9]{2}):([0-9]{2}):([0-9]{2}),([0-9]{3})$/', $timeText, $regs) === false) {
+        if (preg_match('/^([0-9]{2}):([0-9]{2}):([0-9]{2}),([0-9]{2,3})$/', $timeText, $regs) === false) {
             throw new Exception('Invalid time text passed ' . $timeText);
         }
         return (float)$regs[1] * 3600.0 + (float)$regs[2] * 60.0 + (float)$regs[3] + (float)$regs[4] / 1000.0;
@@ -326,7 +333,7 @@ class SRTEntry
      */
     public function getKatakanaText():string
     {
-        return MeCab::toReading($this->text);
+        return KatakanaConverter::convert($this->text);
     }
 
     /**
@@ -402,5 +409,106 @@ class TimecodedCharacter{
     public function getTimeInSecond()
     {
         return $this->timeInSecond;
+    }
+}
+
+class KatakanaConverter{
+    protected static $FILENAME = "./bep-eng.dic";
+    protected static $dictionary = null;
+    protected static $keys = null;
+    protected static $similarDictionary = null;
+
+    protected static $segmentNames = [
+        '', 'マン', 'オク', 'チョウ', 'ケイ', 'ガイ'
+      ];
+    protected static $levelNames = ['', 'ジュウ', 'ヒャク', 'セン'];
+    protected static $numberNames = ['イチ', 'ニ', 'サン', 'ヨン', 'ゴ', 'ロク', 'ナナ', 'ハチ', 'キュウ'];
+
+    public static function convert($text){
+        if(is_null(self::$dictionary)){
+            self::load();
+        }
+        $katakanaText = Mecab::toSortText($text);
+        $katakanaText = preg_replace_callback('/([a-z]+)/i', function($matches){
+            return self::find($matches[1]);
+        }, $katakanaText);
+        $katakanaText = preg_replace_callback('/([0-9]+)/i', function($matches){
+            return self::japaneseNumberReadableFormat($matches[1]);
+        }, $katakanaText);
+        return preg_replace('/[ ・　、。「」？！.,]/u', '', $katakanaText);
+    }
+
+    public static function find($word){
+        $word = strtoupper($word);
+        if(isset(self::$dictionary[$word])){
+            return self::$dictionary[$word];
+        }
+        if(isset(self::$similarDictionary[$word])){
+            return self::$dictionary[self::$similarDictionary[$word]];
+        }
+
+        $found = null;
+        $high_score = 0;
+        foreach(self::$keys as $english){
+            $score = similar_text($english, $word);
+            if($high_score < $score){
+                $high_score = $score;
+                $found = $english;
+            }
+        }
+        self::$similarDictionary[$word] = $found;
+        return self::$dictionary[$found];
+    }
+
+    protected static function load(){
+        self::$dictionary = [];
+        self::$keys = [];
+        self::$similarDictionary = [];
+        if(file_exists(self::$FILENAME) == false){
+            throw new Exception('BEP file ' . self::$FILENAME  . ' is not found');
+        }
+        $handle = fopen(self::$FILENAME, 'r');
+        if (!$handle){
+            throw new Exception('BEP file ' . self::$FILENAME  . ' is not readable');
+        }
+        while (($line = fgets($handle)) !== false) {
+            if($line[0] == '#'){
+                continue;
+            }
+            $data = preg_split('/[ \t]+/', trim($line));
+            self::$dictionary[$data[0]] = $data[1];
+        }
+    
+        fclose($handle);
+        self::$keys = array_keys(self::$dictionary);
+    }
+
+    /**
+     * https://qiita.com/mpyw/items/e3e18954159ef79aa577
+     */
+    public static function japaneseNumberReadableFormat($amount) {
+        if (!(is_int($amount) && $amount >= 0) && !ctype_digit($amount)) {
+            throw new InvalidArgumentException('正整数か正整数形式文字列で渡してください');
+        }
+        $results = [];
+        $segments = array_filter(str_split(strrev($amount), 4), 'intval');
+        foreach ($segments as $i => $segment) {
+            $result = '';
+            $numbers = array_filter(str_split($segment));
+            foreach ($numbers as $j => $number) {
+                $result = 
+                    ($j !== 0 && $number === '1'
+                        ? ''
+                        : self::$numberNames[$number - 1])
+                    . self::$levelNames[$j] . $result
+                ;
+            }
+            if (!isset(self::$segmentNames[$i])) {
+                return 'ムリョウタイスウ';
+            }
+            $result .= self::$segmentNames[$i];
+            $results[] = $result;
+        }
+        return $results ? implode(array_reverse($results)) : 'ゼロ';
     }
 }
