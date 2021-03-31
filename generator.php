@@ -25,7 +25,7 @@ $specs->add('t|template?', 'template file name')
 $specs->add('ct|caption-template?', 'caption template file name')
     ->isa('String')
     ->defaultValue('caption_template.txt');
-$specs->add('o|output?', 'output file name')
+$specs->add('o|output?', 'output file name (srt or xml)')
     ->isa('String')
     ->defaultValue('output.xml');
 
@@ -38,11 +38,25 @@ try {
     $captionFile = new HandCleanedCaptionTextFile($result->file);
 
     CaptionTimeArranger::arrange($captionFile, $srtFile);
-    FinalCutProCaptionXmlGenerator::generate($result->output, $result->template, $result->captionTemplate, $captionFile);
+    OutputFileGenerator::generate($result->output, $result->template, $result->captionTemplate, $captionFile);
 } catch( Exception $e ) {
     echo $e->getMessage();
     $printer = new ConsoleOptionPrinter();
     echo $printer->render($specs);
+}
+
+class OutputFileGenerator
+{
+    public static function generate($outputFilename, $fileTemplateFilename, $captionTemplateFilename, $captionFile)
+    {
+        if (preg_match('/\.xml$/', $outputFilename)) {
+            FinalCutProCaptionXmlGenerator::generate($outputFilename, $fileTemplateFilename, $captionTemplateFilename, $captionFile);
+        } elseif (preg_match('/\.srt$/', $outputFilename)) {
+            SRTFileGenerator::generate($outputFilename, $fileTemplateFilename, $captionTemplateFilename, $captionFile);
+        } else {
+            throw new Exception('Generator is not found.');
+        }
+    }
 }
 
 class FinalCutProCaptionXmlGenerator{
@@ -75,9 +89,32 @@ class FinalCutProCaptionXmlGenerator{
     }
 }
 
+class SRTFileGenerator {
+    public static function generate($outputFilename, $fileTemplateFilename, $captionTemplateFilename, $captionFile){
+        $output = [];
+        $captionTemplate = file_get_contents($captionTemplateFilename);
+        foreach ($captionFile->getEntries() as $index => $caption) {
+            $block = $index + 1 . "\n";
+            $block .= self::floatToTimeCode($caption->getStartTimeInSecond()) . " --> " . self::floatToTimeCode($caption->getEndTimeInSecond()) . "\n";
+            $block .= trim($caption->getText()) . "\n";
+            $output[] = $block;
+        }
+        $output = trim(implode("\n", $output));
+        file_put_contents($outputFilename, $output);
+    }
+    protected static function floatToTimeCode(float $time){
+        $hour = (int)($time / 3600);
+        $minute = (int)(($time % 3600) / 60);
+        $second = (int)($time % 60);
+        $milisecond = ($time - $hour * 3600 - $minute * 60 - $second) * 1000;
+        return sprintf("%02d:%02d:%02d:%03d", $hour, $minute, $second, $milisecond);
+    }
+}
+
 class CaptionTimeArranger{
     public static function arrange(HandCleanedCaptionTextFile $captionFile, SRTFile $srtFile){
         $cursor = 0;
+        $lastCaption = null;
         foreach ($captionFile->getEntries() as $caption) {
             if(is_null($srtFile->getIndexOfTimecodedCharacters($cursor))){
                 continue;
@@ -115,6 +152,10 @@ class CaptionTimeArranger{
             } else {
                 $caption->setEndTimeInSecond($srtFile->getIndexOfTimecodedCharacters($cursor + 1)->getTimeInSecond());
             }
+            if (is_null($lastCaption) === false) {
+                $caption->setStartTimeInSecond($lastCaption->getEndTimeInSecond());
+            }
+            $lastCaption = $caption;
             if (DEBUG) {
                 var_dump($katakanaCaption, $matched, $caption);
             }
@@ -228,7 +269,7 @@ class SRTFile
         }
         $this->content = file_get_contents($this->filename);
 
-        if (preg_match_all('/^([0-9]+)\r?\n([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{2,3}) +--> +([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{2,3})\r?\n([^\n]+)\r?\n\r?\n/usm', $this->content, $regs) === false) {
+        if (preg_match_all('/^([0-9]+)\r?\n([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{1,3}) +--> +([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{1,3})\r?\n([^\n]+)\r?\n\r?\n/usm', $this->content, $regs) === false) {
             throw new Exception('Invalid srt file format ' . $this->filename);
         }
 
@@ -314,7 +355,7 @@ class SRTEntry
 
     protected function parseTime(string $timeText): float
     {
-        if (preg_match('/^([0-9]{2}):([0-9]{2}):([0-9]{2}),([0-9]{2,3})$/', $timeText, $regs) === false) {
+        if (preg_match('/^([0-9]{2}):([0-9]{2}):([0-9]{2}),([0-9]{1,3})$/', $timeText, $regs) === false) {
             throw new Exception('Invalid time text passed ' . $timeText);
         }
         return (float)$regs[1] * 3600.0 + (float)$regs[2] * 60.0 + (float)$regs[3] + (float)$regs[4] / 1000.0;
