@@ -4,69 +4,102 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbace56c521fd818e084e7c292eee4bc",
+    "content-hash": "809416d3ca42df9f0071d3b6d571797f",
     "packages": [
         {
             "name": "babymarkt/deepl-php-lib",
-            "version": "v1.0.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Baby-Markt/deepl-php-lib.git",
-                "reference": "026c5286634f27924440e60aa468046cc33bc69b"
+                "url": "https://github.com/kent013/deepl-php-lib.git",
+                "reference": "8a2c6a341b57523062a3d98b7d2db2d76c60bb0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Baby-Markt/deepl-php-lib/zipball/026c5286634f27924440e60aa468046cc33bc69b",
-                "reference": "026c5286634f27924440e60aa468046cc33bc69b",
+                "url": "https://api.github.com/repos/kent013/deepl-php-lib/zipball/8a2c6a341b57523062a3d98b7d2db2d76c60bb0c",
+                "reference": "8a2c6a341b57523062a3d98b7d2db2d76c60bb0c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=8.0"
             },
             "require-dev": {
-                "php": ">=5.3",
-                "phpunit/phpunit": "^4.8"
+                "phpmd/phpmd": "^2.9",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.5"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "BabyMarkt\\DeepL\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "BabyMarkt\\DeepL\\": "tests/"
+                }
+            },
+            "scripts": {
+                "cs": [
+                    "vendor/bin/phpcs"
+                ],
+                "md": [
+                    "vendor/bin/phpmd src,tests text phpmd.xml.dist"
+                ],
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test:all": [
+                    "composer cs",
+                    "composer md",
+                    "composer test"
+                ]
+            },
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Arkadius Jonczek",
-                    "email": "jonczek@babymarkt.de"
+                    "name": "Entwicklungsteam babymarkt.de",
+                    "email": "entwicklung@babymarkt.de"
                 }
             ],
-            "description": "Simple PHP Library for DeepL API",
+            "description": "DeepL API Client Library supporting PHP >= 8.0",
+            "homepage": "https://github.com/Baby-Markt/deepl-php-lib",
+            "keywords": [
+                "babymarkt",
+                "deepl",
+                "deeply",
+                "i18n",
+                "translation",
+                "translator"
+            ],
             "support": {
-                "issues": "https://github.com/Baby-Markt/deepl-php-lib/issues",
-                "source": "https://github.com/Baby-Markt/deepl-php-lib/tree/master"
+                "source": "https://github.com/kent013/deepl-php-lib/tree/master"
             },
-            "time": "2019-11-25T16:06:27+00:00"
+            "time": "2021-01-21T17:44:16+00:00"
         },
         {
             "name": "corneltek/getoptionkit",
-            "version": "2.6.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/c9s/GetOptionKit.git",
-                "reference": "995607ddf4fc90ebdb4a7d58fe972d581ad8495f"
+                "reference": "9f219446ba544bcf5fdcc25ad4f92afdecd210d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/c9s/GetOptionKit/zipball/995607ddf4fc90ebdb4a7d58fe972d581ad8495f",
-                "reference": "995607ddf4fc90ebdb4a7d58fe972d581ad8495f",
+                "url": "https://api.github.com/repos/c9s/GetOptionKit/zipball/9f219446ba544bcf5fdcc25ad4f92afdecd210d1",
+                "reference": "9f219446ba544bcf5fdcc25ad4f92afdecd210d1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -92,37 +125,33 @@
             "homepage": "http://github.com/c9s/GetOptionKit",
             "support": {
                 "issues": "https://github.com/c9s/GetOptionKit/issues",
-                "source": "https://github.com/c9s/GetOptionKit/tree/2.6.0"
+                "source": "https://github.com/c9s/GetOptionKit/tree/master"
             },
-            "time": "2017-06-30T14:54:48+00:00"
+            "time": "2017-06-30T18:19:27+00:00"
         },
         {
             "name": "graham-campbell/result-type",
-            "version": "v1.0.1",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "7e279d2cd5d7fbb156ce46daada972355cea27bb"
+                "reference": "cce288e91826d6d33d76b57f1ad4bdc3f3a8c1d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/7e279d2cd5d7fbb156ce46daada972355cea27bb",
-                "reference": "7e279d2cd5d7fbb156ce46daada972355cea27bb",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/cce288e91826d6d33d76b57f1ad4bdc3f3a8c1d6",
+                "reference": "cce288e91826d6d33d76b57f1ad4bdc3f3a8c1d6",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0|^8.0",
+                "php": "^7.0 || ^8.0",
                 "phpoption/phpoption": "^1.7.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5|^7.5|^8.5|^9.0"
+                "phpunit/phpunit": "^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.7"
             },
+            "default-branch": true,
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "GrahamCampbell\\ResultType\\": "src/"
@@ -148,7 +177,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.0.1"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/1.0"
             },
             "funding": [
                 {
@@ -160,11 +189,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-04-13T13:17:36+00:00"
+            "time": "2021-01-25T20:12:13+00:00"
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.7.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
@@ -183,6 +212,7 @@
                 "bamarni/composer-bin-plugin": "^1.4.1",
                 "phpunit/phpunit": "^4.8.35 || ^5.7.27 || ^6.5.6 || ^7.0 || ^8.0 || ^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -233,7 +263,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.22.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -251,6 +281,7 @@
             "suggest": {
                 "ext-ctype": "For best performance"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -312,7 +343,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -330,6 +361,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -392,7 +424,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.22.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -407,6 +439,7 @@
             "require": {
                 "php": ">=7.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -475,16 +508,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "b3eac5c7ac896e52deab4a99068e3f4ab12d9e56"
+                "reference": "b740396414a95cbe868bf7f168f997fe16d970d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/b3eac5c7ac896e52deab4a99068e3f4ab12d9e56",
-                "reference": "b3eac5c7ac896e52deab4a99068e3f4ab12d9e56",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/b740396414a95cbe868bf7f168f997fe16d970d6",
+                "reference": "b740396414a95cbe868bf7f168f997fe16d970d6",
                 "shasum": ""
             },
             "require": {
@@ -504,6 +537,7 @@
             "suggest": {
                 "ext-filter": "Required to use the boolean validator."
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -539,7 +573,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.3.0"
+                "source": "https://github.com/vlucas/phpdotenv/tree/master"
             },
             "funding": [
                 {
@@ -551,7 +585,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-20T15:23:13+00:00"
+            "time": "2021-03-24T22:04:11+00:00"
         },
         {
             "name": "youaoi/php-mecab",
@@ -605,8 +639,10 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "babymarkt/deepl-php-lib": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

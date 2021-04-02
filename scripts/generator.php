@@ -9,8 +9,6 @@ use GetOptionKit\OptionCollection;
 use GetOptionKit\OptionParser;
 use GetOptionKit\OptionPrinter\ConsoleOptionPrinter;
 
-define("DEBUG", 1);
-
 $specs = new OptionCollection;
 $specs->add('f|file:', 'file includes captions line by line' )
     ->isa('File');
@@ -34,13 +32,13 @@ $specs->add('o|output?', 'output file name (srt or xml)')
 $parser = new OptionParser($specs);
 
 try {
-    $result = $parser->parse($argv);
+    $options = $parser->parse($argv);
 
-    $srtFile = new SRTFile($result->srtFile);
-    $captionFile = new HandCleanedCaptionTextFile($result->file);
+    $srtFile = new SRTFile($options->srtFile);
+    $captionFile = new HandCleanedCaptionTextFile($options->file);
 
     CaptionTimeArranger::arrange($captionFile, $srtFile);
-    OutputFileGenerator::generate($result->output, $result->template, $result->captionTemplate, $captionFile);
+    OutputFileGenerator::generate($options->output, $options->template, $options->captionTemplate, $captionFile);
 } catch( Exception $e ) {
     echo $e->getMessage();
     $printer = new ConsoleOptionPrinter();

@@ -12,7 +12,7 @@ class Config
     }
     public function __get($key)
     {
-        $key = ltrim(strtoupper(preg_replace('/[A-Z]/', '_\0', $key)), '_');
+        $key = ltrim(strtoupper(preg_replace('/[A-Z]+/', '_\0', $key)), '_');
         return $_ENV[$key];
     }
 

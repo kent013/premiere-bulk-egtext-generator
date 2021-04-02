@@ -22,6 +22,10 @@ class SRTFileEntry
         $this->startTimeInSecond = $this->parseTime($this->startTime);
         $this->endTimeInSecond = $this->parseTime($this->endTime);
 
+        $this->updateTimecodedCharactors();
+    }
+
+    protected function updateTimecodedCharactors(){
         $katakanaText = $this->getKatakanaText();
         $interval = ($this->getEndTimeInSecond() - $this->getStartTimeInSecond()) / (float)mb_strlen($katakanaText);
         $chars = preg_split('//u', $katakanaText, -1, PREG_SPLIT_NO_EMPTY);
@@ -37,6 +41,15 @@ class SRTFileEntry
             throw new Exception('Invalid time text passed ' . $timeText);
         }
         return (float)$regs[1] * 3600.0 + (float)$regs[2] * 60.0 + (float)$regs[3] + (float)$regs[4] / 1000.0;
+    }
+
+    /**
+     * Get the value of text
+     */
+    public function setText(string $text)
+    {
+        $this->text = $text;
+        $this->updateTimecodedCharactors();
     }
 
     /**
@@ -101,5 +114,13 @@ class SRTFileEntry
     public function getTimecodedCharacters():array
     {
         return $this->timecodedCharacters;
+    }
+
+    protected function floatToTimeCode(float $time){
+        $hour = (int)($time / 3600);
+        $minute = (int)(($time % 3600) / 60);
+        $second = (int)($time % 60);
+        $milisecond = ($time - $hour * 3600 - $minute * 60 - $second) * 1000;
+        return sprintf("%02d:%02d:%02d,%03d", $hour, $minute, $second, $milisecond);
     }
 }

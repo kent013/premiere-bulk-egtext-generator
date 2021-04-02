@@ -1,8 +1,15 @@
 {
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+        "type": "vcs",
+        "url": "https://github.com/kent013/deepl-php-lib"
+        }
+    ],
     "require": {
         "corneltek/getoptionkit": "^2.6",
         "youaoi/php-mecab": "^1.0",
-        "babymarkt/deepl-php-lib": "^1.0",
+        "babymarkt/deepl-php-lib": "dev-master",
         "vlucas/phpdotenv": "^5.3"
     },
     "autoload": {

@@ -16,9 +16,9 @@ class SRTFile
         if (file_exists($this->filename) === false) {
             throw new Exception('File not found ' . $this->filename);
         }
-        $this->content = file_get_contents($this->filename);
+        $this->content = $this->remove_utf8_bom(file_get_contents($this->filename));
 
-        if (preg_match_all('/^([0-9]+)\r?\n([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{1,3}) +--> +([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{1,3})\r?\n([^\n]+)\r?\n\r?\n/usm', $this->content, $regs) === false) {
+        if (preg_match_all('/^([0-9]+)\r?\n([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{1,3}) +--> +([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{1,3})\r?\n(.+?)\r?\n(\r?\n)?/usm', $this->content, $regs) === false) {
             throw new Exception('Invalid srt file format ' . $this->filename);
         }
 
@@ -33,6 +33,16 @@ class SRTFile
         foreach ($this->getEntries() as $entry) {
             $this->timecodedCharacters = array_merge($this->timecodedCharacters, $entry->getTimecodedCharacters());
         }
+    }
+
+    /**
+     * https://stackoverflow.com/a/15423899
+     */
+    protected function remove_utf8_bom($text)
+    {
+        $bom = pack('H*','EFBBBF');
+        $text = preg_replace("/^$bom/", '', $text);
+        return $text;
     }
 
     public function getEntries(): array
@@ -70,5 +80,17 @@ class SRTFile
             $text .= $this->getIndexOfTimecodedCharacters($start + $i)->getCharacter();
         }
         return $text;
+    }
+
+    public function save($filename){
+        $output = [];
+        foreach($this->entries as $entry){
+            $block = $entry->getIndex() . "\n";
+            $block .= $entry->getStartTime() . " --> " . $entry->getEndTime() . "\n";
+            $block .= $entry->getText() . "\n";
+            $output[] = $block; 
+        }
+        $output = trim(implode("\n", $output));
+        file_put_contents($filename, $output);
     }
 }

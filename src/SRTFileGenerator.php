@@ -19,6 +19,6 @@ class SRTFileGenerator {
         $minute = (int)(($time % 3600) / 60);
         $second = (int)($time % 60);
         $milisecond = ($time - $hour * 3600 - $minute * 60 - $second) * 1000;
-        return sprintf("%02d:%02d:%02d:%03d", $hour, $minute, $second, $milisecond);
+        return sprintf("%02d:%02d:%02d,%03d", $hour, $minute, $second, $milisecond);
     }
 }
