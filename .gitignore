@@ -1,2 +1,5 @@
 vendor
 output.xml
+test.xml
+test.srt
+.env

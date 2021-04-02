@@ -1,6 +1,13 @@
 {
     "require": {
         "corneltek/getoptionkit": "^2.6",
-        "youaoi/php-mecab": "^1.0"
+        "youaoi/php-mecab": "^1.0",
+        "babymarkt/deepl-php-lib": "^1.0",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "PremiereUtil\\" : "src/"
+        }
     }
 }
